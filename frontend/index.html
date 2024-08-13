@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #75df1e; }
+        .search-status {
+            font-style: italic;
+            color: black;
+            display: none;
+            position: relative;
+        }
+        .search-status::after {
+            content: '...';
+            position: absolute;
+            right: -20px;
+            animation: dotFlashing 1s infinite;
+        }
+        @keyframes dotFlashing {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Inventory Management</h1>
+    <div style="margin-bottom: 10px;">
+        <input type="text" id="search" placeholder="Search...">
+        <span id="search-status" class="search-status">Searching</span>
+    </div>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Description</th>
+                <th>Type</th>
+                <th>Base Unit Measure</th>
+                <th>Inventory</th>
+                <th>Sales Unit Measure</th>
+                <th>Purch Unit Measure</th>
+                <th>Available Inventory</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>
