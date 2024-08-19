@@ -5,7 +5,7 @@ async function fetchData(searchQuery = '') {
     searchStatus.style.display = 'inline'; // Show "Searching" message
 
     try {
-        const response = await fetch(`http://localhost:3000/data?search=${encodeURIComponent(searchQuery)}`);
+        const response = await fetch(`http://localhost:3000/api?search=${encodeURIComponent(searchQuery)}`);
         
         if (!response.ok) {
             throw new Error(`Network response was not ok: ${response.statusText}`);

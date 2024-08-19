@@ -10,7 +10,7 @@ const port = 3000;
 app.use(cors());
 app.use(express.static('frontend'));
 
-app.get('/data', (req, res) => {
+app.get('/api', (req, res) => {
     const url = 'http://4.194.110.74:8148/AGC_UG_Test/ODataV4/Company(\'Asian%20Group%20Of%20Companies\')/getItem';
     const searchQuery = req.query.search || '';
 
